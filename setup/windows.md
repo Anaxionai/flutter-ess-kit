@@ -18,8 +18,9 @@ The versions are in [`VERSIONS.md`](../VERSIONS.md). Steps that need your phone 
 
 | Tool | What it is for | When |
 |---|---|---|
-| Git for Windows (Git Bash) | Version control and your terminal; Flutter needs Git | Week 1 |
-| VS Code + the Flutter extension | Where you write and run code | Week 1 |
+| Git for Windows (Git Bash) | Version control and your terminal; Flutter needs Git | Week 1, Launchpad task 6 |
+| VS Code + the Flutter extension | Where you write and run code | Week 1, Launchpad task 7 |
+| The course kit | The files your tasks link to and copy. It lives in your home folder: `~/flutter-ess-kit` | Week 1, Launchpad task 7 |
 | Flutter SDK (with Dart) | Builds and runs your apps | Week 1 |
 | Google Chrome | Runs your app in the browser | Week 1 |
 | Android Studio (SDK only) | Installs the Android SDK, `adb` and the licences. You never use it to write code | Week 1 |
@@ -31,9 +32,11 @@ Run every command in **Git Bash**, unless a step says PowerShell.
 
 ## Part 1, week 1
 
+Launchpad task 6 does Step 1. Task 7 does Steps 2 to 6, all in Git Bash. Task 11 does Step 7, with your phone.
+
 ### Step 1: Git for Windows
 
-Your Launchpad task installs Git from https://git-scm.com/downloads/win with the default options. Those options include Git Bash and Git Credential Manager (for signing in to GitHub).
+Launchpad task 6 installs Git from https://git-scm.com/downloads/win with the default options. Those options include Git Bash and Git Credential Manager (for signing in to GitHub).
 
 Check it in Git Bash:
 
@@ -47,14 +50,20 @@ You see `git version 2.` and more numbers. Any version from 2.45 is fine.
 
 1. Install VS Code from https://code.visualstudio.com/download with the default options. Tick **Add to PATH** if the installer asks.
 2. Make Git Bash the terminal: press Ctrl+Shift+P, type `Terminal: Select Default Profile` and choose **Git Bash**.
-3. Line endings: open **Settings** (Ctrl+,), search for `eol` and set **Files: Eol** to `\n`.
+3. Line endings: open **Settings** (Ctrl+,), search for `eol` and set **Files: Eol** to `\n`. This is the setting `"files.eol": "\n"`.
 4. Select **Extensions** (Ctrl+Shift+X), search for **Flutter** and install the extension from **Dart Code** (dartcode.org). It installs the Dart extension with it.
 
-Check it: open a new terminal with Ctrl+`. The prompt shows `MINGW64`. Open a new file: the status bar at the bottom right shows `LF`.
+Check it: open a new terminal (**Terminal**, then **New Terminal** in the top menu). The prompt shows `MINGW64`. Open a new file: the status bar at the bottom right shows `LF`, not `CRLF`. In Git Bash, this prints the Eol setting:
+
+```bash
+grep eol "$APPDATA/Code/User/settings.json"
+```
+
+Your task asks you to paste that line into `evidence.md`. If it prints nothing, set **Files: Eol** under the **User** tab of Settings, not Workspace.
 
 ### Step 2b: The course kit, and its two Git files in your repository
 
-Clone the kit next to your course repository (never inside it):
+Clone the kit next to your course repository (never inside it). Launchpad task 7 does this in its step 3, in Git Bash:
 
 ```bash
 cd ~ && git clone https://github.com/Anaxionai/flutter-ess-kit.git
@@ -63,7 +72,7 @@ ls ~/flutter-ess-kit
 
 You see `README.md`, `VERSIONS.md`, `setup` and the other folders.
 
-Your course repository needs the kit's `.gitignore` (keeps `build/`, `.dart_tool/`, keys and `key.properties` out of Git) and `.gitattributes` (LF line endings). Copy them to the **top folder** of your course repository once, when your task says so:
+Your course repository needs the kit's `.gitignore` (keeps `build/`, `.dart_tool/`, keys and `key.properties` out of Git) and `.gitattributes` (LF line endings). Copy them to the **top folder** of your course repository once. Launchpad task 7 does this in its last step, after the clone:
 
 ```bash
 cd <your course repository>
@@ -107,7 +116,7 @@ Check it:
 flutter devices
 ```
 
-The list includes **Chrome (web)**. Your Launchpad task runs the counter app with `flutter run -d chrome`.
+The list includes **Chrome (web)**. Launchpad task 7 runs the counter app with `flutter run -d chrome`.
 
 ### Step 5: Android Studio, only for the Android SDK
 
