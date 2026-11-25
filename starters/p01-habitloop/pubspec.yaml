@@ -1,0 +1,23 @@
+name: habitloop
+description: "HabitLoop: a habit tracker that gets its streaks right."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.14.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  material_ui: ^1.11.1
+  cupertino_icons: ^1.0.8
+  # Task 20 adds sqflite and path; task 22 adds provider (`flutter pub add ...`).
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  # Task 20 adds sqflite_common_ffi (`flutter pub add dev:sqflite_common_ffi`).
+
+flutter:
+  uses-material-design: true

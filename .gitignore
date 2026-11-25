@@ -1,0 +1,46 @@
+# What Flutter, Dart and Android make when you build or test (never commit it)
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+coverage/
+*.iml
+.idea/
+**/android/.gradle/
+**/android/local.properties
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+*.aab
+*.apk
+
+# Signing keys and their passwords: never in Git (see release/README.md)
+*.jks
+*.keystore
+key.properties
+*.pem
+
+# Firebase files made for your own project (see firebase/README.md)
+google-services.json
+GoogleService-Info.plist
+.firebaserc
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+emulator-data/
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+
+# Node tools (the Firebase rules tests)
+node_modules/
+.expo/
+
+# Editors and Windows
+.DS_Store
+Thumbs.db

@@ -1,0 +1,25 @@
+name: bookshelf
+description: "BookShelf: search books, keep a reading list, work offline."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.14.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  material_ui: ^1.11.1
+  cupertino_icons: ^1.0.8
+  http: ^1.6.0
+  # Later tasks add: go_router and provider (task 9), sqflite and path (task 10),
+  # shared_preferences and cached_network_image (task 16).
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  # Task 10 adds sqflite_common_ffi.
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,2 @@
+# The lint rules `flutter create` sets up. `flutter analyze` uses them.
+include: package:flutter_lints/flutter.yaml
