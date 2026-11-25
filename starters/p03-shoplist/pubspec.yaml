@@ -1,0 +1,24 @@
+name: shoplist
+description: "ShopList: a shared shopping list that syncs live."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.14.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  material_ui: ^1.11.1
+  cupertino_icons: ^1.0.8
+  # Task 7 adds firebase_core, firebase_auth and cloud_firestore;
+  # task 10 adds go_router; task 18 adds flutter_local_notifications.
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  # Task 20 adds flutter_launcher_icons.
+
+flutter:
+  uses-material-design: true
